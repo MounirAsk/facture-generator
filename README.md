@@ -14,6 +14,8 @@ This is an open-source project for generating professional invoices in PDF forma
 
 - User-Friendly Design : The web app is easy to use and well-suited for small business owners.
 
+  **!There are still a few features to implement. I'm working on this project when my free time allows!**
+
 # Demo 
 If you want to test the website : [facture-generator](https://mounirask.github.io/facture-generator/)
 
