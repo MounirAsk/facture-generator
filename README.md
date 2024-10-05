@@ -64,6 +64,10 @@ Running the Project
 
 After installing the dependencies, you can run the project by opening the index.html with live server for example.
 
+# Buy Me a Coffee
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/mounirask)
+
 
 # Contributions
 
