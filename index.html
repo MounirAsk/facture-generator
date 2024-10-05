@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de Facture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section du formulaire -->
+        <div class="form-section">
+            <div class="form-section-2">
+                <h2>Informations de votre entreprise</h2>
+                <label>Nom de votre entreprise
+                    <input type="text" id="companyName">
+                </label>
+
+                <label>Adresse
+                    <input type="text" id="companyStreet">
+                </label>
+
+                <label>Ville
+                    <input type="text" id="companyTown">
+                </label>
+
+                <label>Code postal
+                    <input type="text" id="companyZip">
+                </label>
+
+                <label>Numéro de TVA
+                    <input type="text" id="companyTVA">
+                </label>
+
+                <label>Email
+                    <input type="text" id="companyMail">
+                </label>
+
+                <label>IBAN
+                    <input type="text" id="companyIBAN">
+                </label>
+
+                <label>BIC
+                    <input type="text" id="companyBIC">
+                </label>
+                
+                
+                <h2>Coordonnées du client</h2>
+                <label>Entreprise du client
+                    <input type="text" id="clientCompany">
+                </label>
+                
+                <label>Adresse
+                    <input type="text" id="clientStreet">
+                </label>
+
+                <label>Ville
+                    <input type="text" id="clientTown">
+                </label>
+
+                <label>Code postal
+                    <input type="text" id="clientZip">
+                </label>
+
+                <label>Numéro de TVA
+                    <input type="text" id="clientTVA">
+                </label>
+
+                <h2>Détails de la facture</h2>
+                <label>Numéro de la facture
+                    <input type="text" id="invoiceNumber">
+                </label>
+
+                <label>Date d'émission
+                    <input type="date" id="invoiceDate">
+                </label>
+
+                <label>Taux de TVA
+                    <select id="vatRate">
+                        <option value="21">21%</option>
+                        <option value="12">12%</option>
+                        <option value="6">6%</option>
+                    </select>
+                </label>
+
+                <h2>Articles de la facture</h2>
+                <div class="article-entry">
+                    <label>Description de l'article
+                        <input type="text" id="articleDescription">
+                    </label>
+    
+                    <label>Quantité
+                        <input type="number" id="articleQuantity">
+                    </label>
+    
+                    <label>Prix unitaire
+                        <input type="number" id="articleUnitPrice">
+                    </label> 
+    
+                    <button id="addArticleBtn">Ajouter un article</button>
+                </div>
+
+                <div id="articleList">
+
+                </div>
+            </div>
+
+            <div id="downloadBtnContainer"><button id="downloadBtn" onclick="generatePDF()">Télécharger en PDF</button></div>
+            
+        </div>
+    <!-- Section de l'aperçu -->
+    <div class="preview-section">
+        <h1>FACTURE</h1>
+
+        <div class="invoice-info">
+            <p><strong>Numéro de facture :</strong> <span id="previewInvoiceNumber"></span></p>
+            <p><strong>Date d'émission :</strong> <span id="previewInvoiceDate"></span></p>
+        </div>
+        
+       <div class="company-client-info">
+            <div class="company-info">
+                <strong>Facturé par</strong>
+                <p><strong></strong> <span id="previewCompanyName"></span></p>
+                <p><strong></strong> <span id="previewCompanyStreet"></span></p>
+                <p><strong></strong> <span id="previewCompanyTown"></span></p>
+                <p><strong></strong> <span id="previewCompanyZip"></span></p>
+                <p><strong></strong> <span id="previewCompanyTVA"></span></p>
+                <p><strong></strong> <span id="previewCompanyMail"></span></p>
+            </div>
+        
+            <div class="client-info">
+                <strong>Envoyé à</strong>
+                <p><strong></strong> <span id="previewClientCompany"></span></p>
+                <p><strong></strong> <span id="previewClientStreet"></span></p>
+                <p><strong></strong> <span id="previewClientTown"></span></p>
+                <p><strong></strong> <span id="previewClientZip"></span></p>
+                <p><strong></strong> <span id="previewClientTVA"></span></p>
+            </div>
+       </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="articleTableBody">
+            <tr>
+                <td><span id="previewArticleDescription"></span></td>
+                <td><span id="previewArticleQuantity"></span></td>
+                <td><span id="previewArticleUnitPrice"></span></td>
+                <td><span id="previewTotal"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="total-section">
+        <p>Total HT : <span id="totalHT">€</span></p>
+        <p>TVA (<span id="vatRateDisplay"></span>%) : <span id="TVA">€</span></p>
+        <p class="total-amount">Total TTC : <span id="totalTTC">€</span></p>
+    </div>
+    
+    
+    <div class="payment-details">
+        <p><strong>Compte du bénéficiaire  :</strong></p>
+        <p>IBAN : <span id="previewCompanyIBAN"></span></p>
+        <p>BIC : <span id="previewCompanyBIC"></span></p>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./dist/bundle.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

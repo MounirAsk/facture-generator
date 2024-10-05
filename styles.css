@@ -1,0 +1,222 @@
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section du formulaire */
+.form-section {
+    width: 40%;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 5px;
+    height: 100vh; /* Hauteur de la vue */
+    overflow-y: auto; /* Défilement uniquement dans cette section */
+    /*box-sizing: border-box; /* Assure que le padding n'affecte pas la hauteur */
+}
+
+.form-section-2 {
+    width: 90%;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Section de l'aperçu */
+.preview-section {
+    width: 55%;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Supprime le scroll ici */
+}
+
+/* Conteneur pour les informations de l'entreprise et du client */
+.company-client-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Section des informations de l'entreprise */
+.company-info {
+    width: 48%;
+    text-align: left;
+}
+
+/* Section des informations du client */
+.client-info {
+    width: 38%;
+    text-align: left; /* Vous pouvez changer en "right" si vous préférez un alignement à droite */
+}
+
+.invoice-info{
+    margin-bottom: 20px;
+}
+
+.invoice-info p{
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+/* Styles du texte */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+#downloadBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#invoicePreview {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#invoicePreview h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table des articles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+td:nth-child(1){
+    width: 50%;
+}
+
+td:nth-child(2), td:nth-child(3), td:nth-child(4){
+    width: 15%;
+}
+
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+
+.total-section {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.total-section p {
+    margin-bottom: 5px;
+}
+
+.total-section .total-amount {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.payment-details {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+/* Styles pour rendre les boutons plus esthétiques */
+button {
+    background-color: #4CAF50; /* Couleur verte */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px; /* Arrondir les coins */
+}
+
+/* Style au survol */
+button:hover {
+    background-color: #45a049; /* Couleur légèrement plus foncée au survol */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles spécifiques pour le bouton de suppression */
+.deleteArticleBtn {
+    background-color: #f44336; /* Rouge */
+    padding: 5px 15px;
+}
+
+.deleteArticleBtn:hover {
+    background-color: #e53935; /* Couleur légèrement plus foncée pour le bouton de suppression */
+}
+
+/* Style du champ de sélection du taux de TVA */
+#vatRate {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajouter une ombre et changer la couleur au survol */
+#vatRate:hover {
+    background-color: #444;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
