@@ -17,7 +17,7 @@ This is an open-source project for generating professional invoices in PDF forma
   **!There are still a few features to implement. I'm working on this project when my free time allows!**
 
 # Demo 
-If you want to test the website : [facture-generator](https://mounirask.github.io/facture-generator/)
+If you want to test or to use the website : [facture-generator](https://mounirask.github.io/facture-generator/)
 
 ![](https://github.com/MounirAsk/facture-generator/blob/main/Demo_GIF.gif)
 
